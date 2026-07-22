@@ -10,8 +10,10 @@ export default async function handler(req, res) {
   try {
     const url =
       "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks" +
-      "&user=" + encodeURIComponent(USER) +
-      "&api_key=" + KEY +
+      "&user=" +
+      encodeURIComponent(USER) +
+      "&api_key=" +
+      KEY +
       "&format=json&limit=1";
     const r = await fetch(url);
     const data = await r.json();
